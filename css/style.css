@@ -9,11 +9,10 @@
 header {
     width: 100%;
 }
-header .site {
+header .site :nth-child(1) {
     display: flex;
     justify-content: space-between;
 }
-header .site ul li a {
+header .site :nth-child(2){
     display: flex;
-    justify-content: ;
 }

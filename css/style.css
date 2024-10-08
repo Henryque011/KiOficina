@@ -6,13 +6,34 @@
     max-width: 1200px;
     margin: 0 auto;
 }
-header {
+header.topo {
     width: 100%;
 }
-header .site :nth-child(1) {
+.topo>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .site  {
     display: flex;
     justify-content: space-between;
 }
-header .site :nth-child(2){
+header .site nav a {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 50px;
+}
+header .logo {
+    width: 100px;
+}
+
+header .topo ul{ 
+    display: flex;
+    justify-content: cente;
+}
+
+header .tel {
+    width: 100px;
 }

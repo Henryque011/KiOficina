@@ -8,6 +8,10 @@
 }
 header.topo {
     width: 100%;
+    height: 200px;
+}
+.menu ul { 
+    display: flex;
 }
 .topo>div {
     display: flex;

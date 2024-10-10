@@ -6,12 +6,22 @@
     max-width: 1200px;
     margin: 0 auto;
 }
-header.topo {
+header {
+    background-color: lightgrey;
+}
+header .topo {
     width: 100%;
     height: 200px;
 }
+.menu {
+    width: 500px;
+}
 .menu ul { 
     display: flex;
+    height: 100px;
+    width: 500px;
+    align-items: center;
+    text-align: center;
 }
 .topo>div {
     display: flex;
@@ -27,10 +37,12 @@ header .site nav a {
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    width: 50px;
+    width: px;
 }
 header .logo {
-    width: 100px;
+    margin: 10px;
+    width: 200px;
+    
 }
 
 header .topo ul{ 
@@ -39,5 +51,23 @@ header .topo ul{
 }
 
 header .tel {
-    width: 100px;
+    display: flex;
+    height: 100px;
+    width: 200px;
+    align-items: center;
+    text-align: center;
+    font-size: larger;
+}
+header .tel img {
+    width: 40px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: orange;
+}
+
+header .tel h6 {
+    width: 150px;
+}
+html {
+    background-color: gray;
 }

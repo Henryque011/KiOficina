@@ -1,76 +1,223 @@
+/* FONTES */
+@font-face {
+    font-family: 'PACE';
+    src: url('./fonts/pace-racing-car/PACE.woff2') format('woff2'),
+        url('./fonts/pace-racing-car/PACE.woff') format('woff'),
+        url('./fonts/pace-racing-car/PACE.ttf') format('truetype'),
+        url('./fonts/pace-racing-car/PACE.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PACE Italic';
+    src: url('./fonts/pace-racing-car/PACE-Italic.woff2') format('woff2'),
+        url('./fonts/pace-racing-car/PACE-Italic.woff') format('woff'),
+        url('./fonts/pace-racing-car/PACE-Italic.ttf') format('truetype'),
+        url('./fonts/pace-racing-car/PACE-Italic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Sofast';
+    src: url('./fonts/sofast-racing-car/Sofast.woff2') format('woff2'),
+        url('./fonts/sofast-racing-car/Sofast.woff') format('woff'),
+        url('./fonts/sofast-racing-car/Sofast.ttf') format('truetype'),
+        url('./fonts/sofast-racing-car/Sofast.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sofast Italic';
+    src: url('./fonts/sofast-racing-car/Sofast-Italic.woff2') format('woff2'),
+        url('./fonts/sofast-racing-car/Sofast-Italic.woff') format('woff'),
+        url('./fonts/sofast-racing-car/Sofast-Italic.ttf') format('truetype'),
+        url('./fonts/sofast-racing-car/Sofast-Italic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* vAR FONTE */
+:root {
+    --fontNoCorpo: "Sofast";
+    --titulos: "PACE";
+    --corDoTexto: #4B4B4B;
+    --corDeFundo: #101010;
+    --titulos-color: #fff;
+    --border-color: #fff;
+    --white-color: #fff;
+    --black-color: #000000;
+    --primary-color: #FFFF00;
+}
+
 * {
     width: 100%;
 }
+
 .site {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
+
 header {
-    background-color: lightgrey;
+    header {
+        background-color: transparent;
+        backdrop-filter: blur(8px);
+    }
+
+    header .site {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+    }
+
+    .topo {
+        width: 100%;
+        height: 200px;
+    }
+
+    .menu {
+        width: auto;
+    }
+
+    .menu ul {
+        display: flex;
+        align-items: center;
+    }
+
+    .menu li {
+        width: auto;
+        margin: 10px;
+    }
+
+    .menu li a {
+        width: 25px;
+        text-decoration: none;
+        font-weight: bold;
+        color: white;
+        font-family: var(--fontNoCorpo);
+        text-transform: uppercase;
+        font-size: 14pt;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .menu a:hover {
+        color: var(--primary-color);
+        transition: all 0.3 ease;
+    }
 }
-header .topo {
-    width: 100%;
-    height: 200px;
-}
-.menu {
-    width: 500px;
-}
-.menu ul { 
-    display: flex;
-    height: 100px;
-    width: 500px;
-    align-items: center;
-    text-align: center;
-}
-.menu li a{
-    width: 25px;
-}
+
 .topo>div {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-header .site  {
-    display: flex;
-    justify-content: space-between;
-}
-header .site nav a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    width: px;
-}
+
+
 header .logo {
     margin: 20px;
     width: 150px;
-    
 }
 
-header .topo ul{ 
+header .topo ul {
     display: flex;
     justify-content: cente;
 }
 
-header .tel {
+.tel {
     display: flex;
-    height: 100px;
-    width: 200px;
+    width: auto;
     align-items: center;
     text-align: center;
     font-size: larger;
 }
-header .tel img {
-    width: 40px;
-    height: 50px;
-    border-radius: 100%;
+
+.tel a {
+    display: flex;
+    align-items: center;
+}
+
+.tel :nth-child(1) {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
     background-color: orange;
 }
 
-header .tel h6 {
-    width: 150px;
+.tel h6 {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: var(--titulos);
 }
+
+.tel span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 10px;
+    background: orange;
+    margin-right: 10px;
+    cursor: pointer;
+    z-index: 1;
+    position: relative;
+}
+
+.tel span::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background: orange;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: wave 1.5s infinite;
+    z-index: 0;
+}
+
+.border-menu {
+    opacity: 0.5;
+    height: 1.5px;
+    background-color: rgba(255, 255, 255, 0.3490196078);
+    width: 100%;
+}
+
+.banner-slide {
+    width: 100%;
+}
+
+@keyframes wave {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+}
+
+.banner {
+    main {
+    width: auto;
+    height: auto;
+    }
+}
+
 html {
-    background-color: gray;
+    background-color: #4B4B4B;
 }

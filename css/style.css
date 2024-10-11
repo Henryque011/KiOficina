@@ -23,6 +23,9 @@ header .topo {
     align-items: center;
     text-align: center;
 }
+.menu li a{
+    width: 25px;
+}
 .topo>div {
     display: flex;
     align-items: center;
@@ -40,8 +43,8 @@ header .site nav a {
     width: px;
 }
 header .logo {
-    margin: 10px;
-    width: 200px;
+    margin: 20px;
+    width: 150px;
     
 }
 

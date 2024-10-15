@@ -1,40 +1,40 @@
 /* FONTES */
 @font-face {
     font-family: 'PACE';
-    src: url('../fonts/pace-racing-car/PACE.woff2') format('woff2'),
-        url('../fonts/pace-racing-car/PACE.woff') format('woff'),
-        url('../fonts/pace-racing-car/PACE.ttf') format('truetype'),
-        url('../fonts/pace-racing-car/PACE.otf') format('opentype');
+    src: url('../fonts/PACE.woff2') format('woff2'),
+        url('../fonts/PACE.woff') format('woff'),
+        url('../fonts/PACE.ttf') format('truetype'),
+        url('../fonts/PACE.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'PACE Italic';
-    src: url('../fonts/pace-racing-car/PACE-Italic.woff2') format('woff2'),
-        url('../fonts/pace-racing-car/PACE-Italic.woff') format('woff'),
-        url('../fonts/pace-racing-car/PACE-Italic.ttf') format('truetype'),
-        url('../fonts/pace-racing-car/PACE-Italic.otf') format('opentype');
+    src: url('../fonts/PACE-Italic.woff2') format('woff2'),
+        url('../fonts/PACE-Italic.woff') format('woff'),
+        url('../fonts/PACE-Italic.ttf') format('truetype'),
+        url('../fonts/PACE-Italic.otf') format('opentype');
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Sofast';
-    src: url('../fonts/sofast-racing-car/Sofast.woff2') format('woff2'),
-        url('../fonts/sofast-racing-car/Sofast.woff') format('woff'),
-        url('../fonts/sofast-racing-car/Sofast.ttf') format('truetype'),
-        url('../fonts/sofast-racing-car/Sofast.otf') format('opentype');
+    src: url('../fonts/Sofast.woff2') format('woff2'),
+        url('../fonts/Sofast.woff') format('woff'),
+        url('../fonts/Sofast.ttf') format('truetype'),
+        url('../fonts/Sofast.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Sofast Italic';
-    src: url('../fonts/sofast-racing-car/Sofast-Italic.woff2') format('woff2'),
-        url('../fonts/sofast-racing-car/Sofast-Italic.woff') format('woff'),
-        url('../fonts/sofast-racing-car/Sofast-Italic.ttf') format('truetype'),
-        url('../fonts/sofast-racing-car/Sofast-Italic.otf') format('opentype');
+    src: url('../fonts/Sofast-Italic.woff2') format('woff2'),
+        url('../fonts/Sofast-Italic.woff2') format('woff'),
+        url('../fonts/Sofast-Italic.ttf') format('truetype'),
+        url('../fonts/Sofast-Italic.otf') format('opentype');
     font-weight: normal;
     font-style: italic;
 }
@@ -50,10 +50,6 @@
     --white-color: #fff;
     --black-color: #000000;
     --primary-color: #FFFF00;
-}
-
-* {
-    width: 100%;
 }
 
 .site {
@@ -91,7 +87,7 @@ header {
         color: white;
         font-family: var(--fontNoCorpo);
         text-transform: uppercase;
-        font-size: 14pt;
+        font-size: 10pt;
         align-items: center;
         text-align: center;
         padding: 10px;
@@ -144,8 +140,8 @@ header .topo ul {
 }
 
 .tel :nth-child(1) {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     background-color: orange;
 }
@@ -153,7 +149,7 @@ header .topo ul {
 .tel h6 {
     color: white;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 14px;
     font-family: var(--titulos);
 }
 
@@ -222,7 +218,7 @@ header .topo ul {
     overflow: hidden;
 }
 
-.oficina-slide {
+.oficina-slide{
 
     .slide-item { 
         position: relative;
@@ -232,6 +228,7 @@ header .topo ul {
     .slide-item img {
         width: 100%;
         height: 100%;
+        z-index: 999px;
         object-fit: cover;
     }
 
@@ -249,6 +246,7 @@ header .topo ul {
 
     .titulo-slide p {
         font-size: 1em;
+        font-family: var(--fontNoCorpo);
     }
 
     .titulo-slide a {
@@ -276,6 +274,7 @@ header .topo ul {
 }
 
 .slide {
+    
     .slick-prev,
     .slick-next {
         position: absolute;
@@ -301,6 +300,9 @@ header .topo ul {
         font-size: 50px;
         opacity: 1;
         color: #FFFF00;
+        background-color: rgb(75, 63, 65);
+        border-radius: 90%;
+        padding: 2px;
     }
 
     .slick-next {
@@ -404,6 +406,55 @@ header .topo ul {
         color: rgb(78, 76, 76);
     }
 }
+
+.oficina-slide {
+    .oficina-contato-info{
+        text-decoration: none;
+    }
+    .oficina-contato-info {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 160px;
+        color: var(--titulos-color);
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    .oficina-contato-info div {
+        margin: 0 2%;
+    }
+
+    .oficina-contato-info div a {
+        display: flex;
+        align-items: center;
+    }
+
+    .oficina-contato-info span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        padding: 10px;
+        background-color: rgb(212, 130, 1);
+        margin-right: 10px;
+        cursor: pointer;
+        z-index: 1;
+        position: relative;
+        box-shadow: 0 0 0 5px rgba(212, 130, 1, 0.3),
+            0 0 0 10px rgba(212, 130, 1, 0.1);
+    }
+
+    .oficina-contato-info h6 {
+        font-size: .8em;
+        text-transform: none;
+        text-decoration: none;
+        font-family: var(--titulos);
+        color: white;
+    }
+}
+
 html {
     background-color: gray;
 }

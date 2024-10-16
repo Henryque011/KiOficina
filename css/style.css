@@ -240,12 +240,12 @@ header .topo ul {
     }
 
     .titulo-slide h2 {
-        font-size: 2em;
+        font-size: 3em;
         font-family: 'PACE Italic';
     }
 
     .titulo-slide p {
-        font-size: 1em;
+        font-size: 14pt;
         font-family: var(--fontNoCorpo);
     }
 
@@ -263,6 +263,7 @@ header .topo ul {
         transform-style: preserve-3d;
         transition: background-color 0.4s, transform 0.3s, color 0.3s;
         transform: translate(0, 0px, 0px);
+        text-decoration: none;
     }
 
     .titulo-slide a:hover {
@@ -429,6 +430,7 @@ header .topo ul {
     .oficina-contato-info div a {
         display: flex;
         align-items: center;
+        text-decoration: none;
     }
 
     .oficina-contato-info span {
@@ -452,6 +454,117 @@ header .topo ul {
         text-decoration: none;
         font-family: var(--titulos);
         color: white;
+    }
+}
+
+.oficina-contato-social {
+    position: absolute;
+    z-index: 11;
+    width: 100px;
+    color: var(--titulos-color);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+    top: 30%;
+
+    .linha-horizontal {
+        width: 1px;
+        height: 85px;
+        background: rgb(212, 130, 1);
+    }
+
+    .social-text {
+        transform: rotate(-90deg);
+        color: #fff;
+        font-family: Oxanium;
+        font-size: .8em;
+        font-weight: 400;
+        margin-top: 40px;
+        font-family: 'PACE Italic';
+    }
+
+    a svg path {
+        fill: white;
+        transition: fill 0.3s ease;
+    }
+
+    a:hover svg path {
+        fill: #FFFF00;
+    }
+
+}
+
+.ofc_dest {
+    
+    >div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .cx {
+        width: 30%;
+
+        .num{
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 25px;
+        }
+        h4{
+            padding-left: 15px;
+            color: transparent;
+            -webkit-text-stroke: 1px #FFFF00;
+        }
+    }
+
+    .dest_inf{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #000000;
+        padding: 45px 35px;
+        text-align: center;
+        font-size: 16px;
+        height: 200px;
+
+        .dest_icon span{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            padding: 10px;
+            background-color: rgb(212, 130, 1);
+            margin-right: 10px;
+            cursor: pointer;
+            z-index: 1;
+            position: relative;
+        }
+
+        .dest_icon span::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            background: rgb(212, 130, 1);
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            animation: anima 1.5s infinite;
+            z-index: 0;
+        }
+        .dest_txt {
+            h4 {
+
+                font-size: 1em;
+                margin: 5% 0;
+            }
+
+            p {
+                font-family: var(--fontNoCorpo);
+                color: var(--white-color);
+                font-size: .8em;
+            }
     }
 }
 

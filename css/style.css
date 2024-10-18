@@ -595,8 +595,8 @@ header .topo ul {
         .pq_cabecalho {
             position: relative;
         }
-    
-        .txt_fundo { 
+        
+        .txt-fundo{ 
             z-index: 9;
             opacity: 0.3;
             position: absolute;
@@ -621,6 +621,7 @@ header .topo ul {
             background-size: 200px 100%;
         }
     }
+    
 }
 html {
     background-color: rgb(158, 158, 158);
